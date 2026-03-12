@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kosta Dimitrijevic</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<meta name="description" content="Kosta Dimitrijevic — computer scientist building accessible, responsive web experiences.">
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="container header-inner">
+
+<button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation">
+<span class="hamburger"></span>
+</button>
+
+<nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+</div>
+</header>
+
+<main>
+
+<section id="hero" class="hero">
+<div class="container hero-grid">
+
+<div class="hero-copy">
+<h1>Kosta Dimitrijevic</h1>
+
+<p class="lead">
+Computer science specialist and data analyist
+</p>
+
+</div>
+
+<div class="hero-image">
+<img src="images/selfie.png" alt="Portrait of Kosta Dimitrijevic">
+</div>
+
+</div>
+</section>
+
+<section class="section-divider"></section>
+
+<section id="about" class="section about">
+<div class="container">
+
+<h2>About Me</h2>
+
+<div class="about-grid">
+<div>
+<p>I am a Computer Science student living in Illinois, currently completing my degree with a minor in Cybersecurity. Through coursework and personal projects, I have gained experience building applications using Python and JavaScript while also creating responsive web interfaces with HTML, CSS, and React. </p>
+
+
+<h3>Skills & Technologies</h3>
+
+<p>I have experience developing software and data-driven applications using Python and JavaScript. Through both coursework and personal projects, I have built responsive web interfaces using HTML, CSS, and React while gaining experience with modern development tools and version control systems.</p> 
+<p>While I have experience in web development, my primary focus is data analysis and statistical modeling. I work with development environments such as IntelliJ IDEA and use Git and GitHub for version control and project management when developing and maintaining software projects.</p>
+
+<h3>Education</h3>
+
+<p>
+I am currently attending Northeastern Illinois University, where I am pursuing a Bachelor of Science in Computer Science with a minor in Cybersecurity. I am expected to graduate by the end of 2027.
+</p>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="projects" class="section projects">
+<div class="container">
+
+<h2>Projects</h2>
+
+<div class="projects-grid">
+
+<article class="project-card">
+<img src="images/Assignment1.png" alt="Profile card project screenshot">
+
+<div class="project-body">
+<h3>Profile Card Project</h3>
+<p>
+A reusable HTML and CSS component demonstrating understanding of semantic
+HTML, typography and the CSS box model.
+</p>
+
+<p class="project-tech">HTML • CSS Grid</p>
+</div>
+</article>
+
+<article class="project-card">
+<img src="images/Assignment2.png" alt="Interactive webpage screenshot">
+
+<div class="project-body">
+<h3>Interactive Webpage</h3>
+
+<p>
+A responsive webpage that adapts to mobile, tablet and desktop screens.
+Built using mobile-first design with Flexbox, Grid and media queries.
+</p>
+
+<p class="project-tech">HTML • CSS • JavaScript</p>
+</div>
+</article>
+
+<article class="project-card">
+<img src="images/Statistics.png" alt="World happiness analysis project">
+
+<div class="project-body">
+<h3>World Happiness Report Analysis</h3>
+
+<p>
+A statistical analysis project exploring factors influencing national
+happiness. I performed exploratory data analysis, produced correlation
+visualizations and built a regression model evaluating variables such as
+GDP, social support and life expectancy.
+</p>
+
+<p class="project-tech">Python • Pandas • Matplotlib • Statsmodels</p>
+
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="contact" class="section contact">
+<div class="container">
+
+<h2>Contact</h2>
+
+<div class="contact-grid">
+
+<form class="contact-form" id="contact-form" novalidate>
+
+<label for="name">Name</label>
+<input id="name" name="name" type="text" required>
+
+<label for="email">Email</label>
+<input id="email" name="email" type="email" required>
+
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="6" required></textarea>
+
+<button class="btn primary" type="submit">Send message</button>
+
+<p class="form-note">Demo form — not connected to email.</p>
+
+</form>
+
+<aside class="contact-info">
+
+<p>
+<a href="mailto:kostamiledimitrijevic@gmail.com">
+<svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-11zM5.5 6L12 10.5 18.5 6"/></svg>
+<span>kostamiledimitrijevic@gmail.com</span>
+</a>
+</p>
+
+<p>
+<a href="https://github.com/K-Dimitrijevic" target="_blank">
+<img class="icon" src="images/github.svg" alt="GitHub">
+<span>github.com/K-Dimitrijevic</span>
+</a>
+</p>
+
+<p>
+<a href="https://www.linkedin.com/in/kosta-dimitrijevic-b94572352/" target="_blank">
+<img class="icon" src="images/linkedin.svg" alt="LinkedIn">
+<span>linkedin.com/in/kosta-dimitrijevic</span>
+</a>
+</p>
+
+</aside>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+<div class="container footer-inner">
+<p>© 2026 Kosta Dimitrijevic</p>
+</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

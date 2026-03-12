@@ -1,0 +1,386 @@
+:root{
+  --color-primary:#2E2E2E;
+  --color-accent:#6C757D;
+  --color-neutral:#F4F4F4;
+  --color-secondary:#E0E0E0;
+  --color-header:#3a8ae6;
+  --color-muted:#FFFFFF;
+
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  --font-heading:"Poppins",var(--font-body);
+
+  --max-width:1100px;
+  --container-padding:1.25rem;
+}
+
+/* Base */
+
+*{box-sizing:border-box}
+
+html,body{height:100%;max-width:100%;overflow-x:hidden}
+
+body{
+  margin:0;
+  font-family:var(--font-body);
+  background:var(--color-neutral);
+  color:var(--color-primary);
+  line-height:1.5;
+  scroll-behavior:smooth;
+  font-size:16px;
+}
+
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 var(--container-padding);
+}
+
+/* Accessibility */
+
+a:focus{
+  outline:2px solid var(--color-header);
+  outline-offset:2px;
+}
+
+/* Header */
+
+.site-header{
+  background:var(--color-header);
+  border-bottom:1px solid #e9ecef;
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:64px;
+}
+
+/* Navigation */
+
+.nav-toggle{
+  display:none;
+  background:none;
+  border:0;
+  padding:.5rem;
+  cursor:pointer;
+}
+
+.hamburger{
+  width:22px;
+  height:2px;
+  background:var(--color-primary);
+  position:relative;
+  display:block;
+  transition:.2s;
+}
+
+.hamburger::before,
+.hamburger::after{
+  content:"";
+  width:22px;
+  height:2px;
+  background:var(--color-primary);
+  position:absolute;
+  left:0;
+  transition:.2s;
+}
+
+.hamburger::before{top:-7px}
+.hamburger::after{top:7px}
+
+/* burger animation */
+
+.nav-toggle.open .hamburger{
+  background:transparent;
+}
+
+.nav-toggle.open .hamburger::before{
+  transform:rotate(45deg);
+  top:0;
+}
+
+.nav-toggle.open .hamburger::after{
+  transform:rotate(-45deg);
+  top:0;
+}
+
+/* Nav */
+
+.primary-nav{
+  margin:0 auto;
+}
+
+.primary-nav ul{
+  list-style:none;
+  display:flex;
+  gap:1rem;
+  margin:0;
+  padding:0;
+}
+
+.primary-nav a{
+  text-decoration:none;
+  color:var(--color-muted);
+  font-weight:600;
+  padding:.5rem;
+}
+
+.primary-nav a:hover{
+  color:var(--color-accent);
+}
+
+/* Hero */
+
+.hero{
+  padding:2rem 0;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:2rem;
+  align-items:center;
+}
+
+.hero h1{
+  font-family:var(--font-heading);
+  font-size:3rem;
+  margin:0 0 .5rem;
+  line-height:1.2;
+}
+
+.lead{
+  font-size:1.15rem;
+  max-width:520px;
+  margin:0 0 1.5rem;
+  color:#555;
+}
+
+.hero-image img{
+  width:100%;
+  border-radius:8px;
+  object-fit:cover;
+}
+
+/* Buttons */
+
+.btn{
+  display:inline-block;
+  padding:.7rem 1.3rem;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.btn.primary{
+  background:var(--color-accent);
+  color:white;
+}
+
+.btn.outline{
+  border:1px solid var(--color-accent);
+  color:var(--color-accent);
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+/* Thick divider */
+
+.section-divider{
+  width:100%;
+  height:28px;
+  background:var(--color-secondary);
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+  margin:2rem 0;
+}
+
+/* Sections */
+
+.section{
+  padding:1rem 0;
+}
+
+.section h2{
+  font-family:var(--font-heading);
+  margin-bottom:1rem;
+}
+
+/* About */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 280px;
+  gap:1.5rem;
+}
+
+/* Projects */
+
+.projects-grid{
+  display:grid;
+  gap:1rem;
+}
+
+.project-card{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.5rem;
+  align-items:center;
+  background:var(--color-secondary);
+  padding:1rem;
+  border-radius:8px;
+  box-shadow:0 1px 3px rgba(0,0,0,.06);
+}
+
+.project-card img{
+  width:100%;
+  max-width:100%;
+  height:auto; /* responsive by default */
+  object-fit:cover;
+  border-radius:6px;
+}
+
+.project-card:nth-child(even) img{
+  order:-1;
+}
+
+.project-tech{
+  margin:.5rem 0;
+  color:#555;
+}
+
+/* Contact */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:.6rem;
+  border-radius:6px;
+  border:1px solid #ddd;
+  margin-bottom:.75rem;
+}
+
+.form-note{
+  font-size:.9rem;
+  color:#666;
+}
+
+/* Contact icons */
+
+.contact-info a{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  text-decoration:none;
+  color:var(--color-primary);
+}
+
+.contact-info a:hover{
+  color:var(--color-accent);
+}
+
+.icon{
+  width:24px;
+  height:auto;
+}
+
+/* Footer */
+
+.site-footer{
+  background:var(--color-secondary);
+  border-top:1px solid #e9ecef;
+  padding:.5rem 0;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* Responsive */
+
+/* Tablet: 769px — 1024px */
+@media (min-width:769px) and (max-width:1024px){
+
+  /* Slightly reduce the image column so text has more room */
+  .hero-grid{grid-template-columns:1fr 320px}
+
+  /* Projects show in two columns on tablets when space allows */
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+
+  /* Project card stacks its image and body vertically for narrow cards */
+  .project-card{grid-template-columns:1fr}
+
+  .about-grid{grid-template-columns:1fr 220px}
+
+  .contact-grid{grid-template-columns:1fr 280px}
+}
+
+/* Mobile: up to 768px */
+@media (max-width:768px){
+
+  .nav-toggle{display:block}
+
+  /* Ensure header items can be reordered and the toggle sits on the right */
+  .header-inner{position:relative}
+  .nav-toggle{order:2;margin-left:auto}
+
+  .primary-nav{
+    position:absolute;
+    right:1rem;
+    top:64px;
+    background:white;
+    border:1px solid #eee;
+    border-radius:8px;
+    display:none;
+    width:calc(100% - 2rem);
+    max-width:320px;
+  }
+
+  .primary-nav.open{display:block}
+
+  .primary-nav ul{
+    flex-direction:column;
+    padding:.5rem;
+  }
+
+  /* When the mobile nav is opened, make the link text gray for readability */
+  .primary-nav.open a{
+    color: var(--color-primary);
+  }
+  .primary-nav.open a:hover{
+    color: var(--color-accent);
+  }
+
+  /* Stack hero and projects */
+  .hero-grid{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:1fr}
+  .project-card{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+/* Desktop: 1025px and up */
+@media (min-width:1025px){
+  /* Show projects in two columns on larger screens */
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .project-card{grid-template-columns:1fr 1fr}
+  /* Show full image (natural aspect) on desktop as well */
+  .project-card img{height:auto}
+}
