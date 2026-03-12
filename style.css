@@ -109,7 +109,7 @@ a:focus{
   top:0;
 }
 
-/* Nav */
+/* Nav (desktop) */
 
 .primary-nav{
   margin:0 auto;
@@ -244,7 +244,7 @@ a:focus{
 .project-card img{
   width:100%;
   max-width:100%;
-  height:auto; /* responsive by default */
+  height:auto;
   object-fit:cover;
   border-radius:6px;
 }
@@ -318,17 +318,10 @@ a:focus{
 /* Tablet: 769px — 1024px */
 @media (min-width:769px) and (max-width:1024px){
 
-  /* Slightly reduce the image column so text has more room */
   .hero-grid{grid-template-columns:1fr 320px}
-
-  /* Projects show in two columns on tablets when space allows */
   .projects-grid{grid-template-columns:repeat(2,1fr)}
-
-  /* Project card stacks its image and body vertically for narrow cards */
   .project-card{grid-template-columns:1fr}
-
   .about-grid{grid-template-columns:1fr 220px}
-
   .contact-grid{grid-template-columns:1fr 280px}
 }
 
@@ -337,7 +330,6 @@ a:focus{
 
   .nav-toggle{display:block}
 
-  /* Ensure header items can be reordered and the toggle sits on the right */
   .header-inner{position:relative}
   .nav-toggle{order:2;margin-left:auto}
 
@@ -360,7 +352,6 @@ a:focus{
     padding:.5rem;
   }
 
-  /* When the mobile nav is opened, make the link text gray for readability */
   .primary-nav.open a{
     color: var(--color-primary);
   }
@@ -368,7 +359,6 @@ a:focus{
     color: var(--color-accent);
   }
 
-  /* Stack hero and projects */
   .hero-grid{grid-template-columns:1fr}
   .projects-grid{grid-template-columns:1fr}
   .project-card{grid-template-columns:1fr}
@@ -378,9 +368,7 @@ a:focus{
 
 /* Desktop: 1025px and up */
 @media (min-width:1025px){
-  /* Show projects in two columns on larger screens */
   .projects-grid{grid-template-columns:repeat(2,1fr)}
   .project-card{grid-template-columns:1fr 1fr}
-  /* Show full image (natural aspect) on desktop as well */
   .project-card img{height:auto}
 }
